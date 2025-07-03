@@ -1,0 +1,6 @@
+streamlit
+pandas
+spotipy
+transformers==4.39.3
+torch==2.1.2
+six
