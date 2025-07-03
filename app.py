@@ -11,7 +11,7 @@ sp = spotipy.Spotify(auth_manager=SpotifyClientCredentials(
 ))
 
 # 🤗 Hugging Face Setup
-hf_token = "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"
+hf_token = st.secrets["hf_token"] 
 tokenizer = AutoTokenizer.from_pretrained("distilbert-base-uncased-finetuned-sst-2-english", use_auth_token=hf_token)
 model = AutoModelForSequenceClassification.from_pretrained("distilbert-base-uncased-finetuned-sst-2-english", use_auth_token=hf_token)
 classifier = pipeline("sentiment-analysis", model=model, tokenizer=tokenizer)
